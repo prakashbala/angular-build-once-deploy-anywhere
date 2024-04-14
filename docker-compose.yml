@@ -1,0 +1,15 @@
+services: 
+  angular-boda: 
+    container_name: angularbodacontainer
+    build: . 
+    image: angular-boda:v1
+    ports:
+      - 80:8080
+    expose:
+      - 80
+    networks:
+      - internalnet
+
+networks:
+  internalnet:
+    driver: bridge
